@@ -5,7 +5,7 @@ describe('Removing users from the database', () => {
     let tagoe;
 
     beforeEach((done) => {
-        tagoe = new User({ name: 'Tagoe'})
+        tagoe = new User({ name: 'Tagoe', likes: 0})
         tagoe.save()
             .then(() => done());
     })
@@ -38,5 +38,14 @@ describe('Removing users from the database', () => {
 
     it('findOneAndUpdate class instance update', (done) => {
         assertName(User.findOneAndUpdate({name: 'Tagoe'}, { name: 'Alex'}), done);
+    })
+
+    it('finds a user an increment likes by 1', (done) => {
+        User.update({ name: 'Tagoe'}, { $inc: { likes: 1} })
+            .then(() => User.findOne({ name: 'Tagoe'}))
+            .then((user) => {
+                assert(user.likes === 1);
+                done();
+            })
     })
 })
