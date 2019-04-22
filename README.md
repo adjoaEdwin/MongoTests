@@ -1,2 +1,2 @@
 # MongoTests
-Test driven MongoDB database app
+Test driven MongoDB database app with mocha
