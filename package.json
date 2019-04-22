@@ -1,0 +1,25 @@
+{
+  "name": "MongoTests",
+  "version": "1.0.0",
+  "description": "Test driven MongoDB database app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adjoaEdwin/MongoTests.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adjoaEdwin/MongoTests/issues"
+  },
+  "homepage": "https://github.com/adjoaEdwin/MongoTests#readme",
+  "dependencies": {
+    "mocha": "^6.1.4",
+    "mongoose": "^5.5.2",
+    "nodemon": "^1.18.11"
+  }
+}
